@@ -1,0 +1,153 @@
+.contact {
+    height: calc(100vh - 70px);
+    display: flex;
+    padding: 20px;
+    overflow: scroll;
+}
+
+.contact .contact-container {
+    margin: auto;
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(5px);
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 24px;
+    border-radius: 6px;
+    padding: 32px 28px;
+    max-width: 768px;
+    width: 100%;
+    position: relative;
+    z-index:auto;
+}
+
+.contact-left h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #eee;
+    border-bottom: 1px solid;
+    padding-bottom: 12px;
+    margin-bottom: 18px;
+}
+
+.contact-left a {
+    font-size: 13px;
+    font-weight: 400;
+    color: #b1b1b1;
+    text-decoration: underline 1px;
+}
+
+.contact-form {
+    display: grid;
+    gap: 16px;
+    padding-right: 28px;
+}
+
+.contact-form .contact-err {
+    padding: 12px 20px;
+    background: rgb(248, 124, 78);
+    border-radius: 4px;
+    display: none;
+}
+.contact-err.show {
+    display: block;
+}
+
+.contact-err .contact-err-text {
+    font-size: 13px;
+    color: #eee;
+}
+
+.contact-form h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    padding-bottom: 12px;
+    border-bottom: 1px solid;
+}
+
+.contact-form .field {
+    width: 100%;
+    position: relative;
+}
+
+.field .inp {
+    width: 100%;
+    height: 42px;
+    border-radius: 4px;
+    padding: 0 16px;
+    background: transparent;
+    border: 1px solid rgb(252, 184, 160);
+    color: #eee;
+}
+
+.field textarea {
+    min-height: 65px;
+    max-height: 95px;
+    resize: none;
+    padding-top: 12px;
+}
+
+.field .inp.invalid {
+    border-color: orangered;
+}
+
+.field label {
+    position: absolute;
+    top: -7px;
+    left: 16px;
+    font-size: 11px;
+    color: #42455a;
+    transition: all .2s ease;
+    padding: 1px 12px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 4px;
+}
+
+.contact-form .btn-submit-form {
+    padding: 12px;
+    background: transparent;
+    color: #cfcfcf;
+    border: 1px solid;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .contact .contact-container {
+        grid-template-columns: 100%;
+    }
+}
+
+.contact-loader {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, .15);
+    display: none;
+}
+
+.contact-loader.show {
+    display: block;
+}
+
+.contact-loader i {
+    margin: auto;
+    font-size: 90px;
+    color: #fff;
+    animation: spin .1s ease linear;
+}
+
+.err {
+    font-size: 11px;
+    font-weight: 500;
+    color: orangered;
+    padding-top: 3px;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,40 @@
+.success{
+    display: flex;
+    height: calc(100vh - 70px);
+}
+.success-con {
+    padding: 20px;
+    margin:auto;
+    display: flex;
+}
+
+.success-box {
+    margin: auto;
+    max-width: 560px;
+    width: 100%;
+    text-align: center;
+    padding: 32px;
+    backdrop-filter: blur(15px);
+    border-radius: 6px;
+}
+
+.success-box img {
+    height: 128px;
+    width: 128px;
+    object-fit: contain;
+}
+
+.success-box .success-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #eee;
+    margin-top: 14px;
+}
+
+.success-box .btn {
+    padding: 16px 56px;
+    background: #6662e2;
+    margin-top: 16px;
+    font-size: 14px;
+    border-radius: 4px;
+}

@@ -1,0 +1,99 @@
+.header {
+    backdrop-filter: blur(5px);
+    z-index: 999;
+    position: relative;
+}
+
+.header-container {
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    z-index: 999;
+}
+
+.header-container .logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+.logo a {
+    text-decoration: underline 4px;
+    color: rgb(202, 93, 3);
+}
+
+.header-container .btn-toggle-navbar {
+    padding: 8px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: transparent;
+    display: none;
+}
+
+.btn-toggle-navbar i {
+    font-size: 20px;
+    color: #fff;
+}
+
+.btn-toggle-navbar:hover {
+    background: rgba(255, 255, 255, .2);
+}
+.navbar{
+    z-index: 9999;
+}
+
+.navbar .navlist {
+    display: flex;
+    list-style: none;
+    gap: 16px;
+}
+
+.navitem .navlink {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.navitem .navlink:where(.active, :hover) {
+    text-decoration: underline 2px;
+}
+
+/* responseive header  */
+
+@media (max-width: 768px) {
+    .header-container .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: rgba(0, 0, 0, 1);
+        width: 260px;
+        border-radius: 6px 0 0 6px;
+        z-index: 999 !important;
+        box-shadow: 0 0 2px #5e5e5e;
+        transition: all .22s ease;
+        transform: scale(0);
+        transform-origin: top right;
+    }
+
+    .navbar .navlist {
+        display: grid;
+        padding: 16px 0;
+        gap: 4px;
+    }
+
+    .header-container .btn-toggle-navbar {
+        display: block;
+    }
+
+    .btn-toggle-navbar:focus  ~ .navbar,
+    .navbar:focus-within {
+        transform: scale(1);
+    }
+
+    .navitem .navlink {
+        display: block;
+        padding: 12px 36px;
+    }
+
+    .navitem .navlink:where(.active, :hover) {
+        text-decoration: none;
+        background: rgba(255, 255, 255, .2);
+    }
+}

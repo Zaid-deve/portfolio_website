@@ -1,0 +1,121 @@
+.home {
+    height: calc(100vh - 70px);
+    display: grid;
+}
+
+.home .home-container {
+    margin: auto;
+    position: relative;
+}
+
+.home-container .home-text {
+    display: grid;
+    gap: 22px;
+    max-width: 520px;
+    width: 100%;
+}
+
+.home-text h1 {
+    font-size: 32px;
+    font-weight: 400;
+    color: rgb(252, 255, 253);
+}
+
+.home-text p {
+    font-size: 14px;
+    font-weight: 300;
+    color: #f4f4f4;
+}
+
+.home-text .home-text-btns {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+}
+
+.home-text-btns .btn {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 14px 52px;
+    background: transparent;
+    color: #bebebe;
+    transition: all .12s ease;
+}
+
+.home-text-btns .btn-contact {
+    background: rgba(0, 0, 0, .4);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 .8px #eee;
+}
+
+.home-text-btns .btn-get-resume {
+    box-shadow: 0 0 1px #eee;
+}
+
+.home-text-btns .btn:hover {
+    box-shadow: 0 0 45px rgb(241, 156, 86);
+}
+
+.social-icons {
+    display: grid;
+    align-items: center;
+    gap: 12px;
+    position: absolute;
+    right: 64px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.social-icons .btn {
+    display: block;
+    padding: 7px 9px;
+    background: rgba(255,255,255,.15);
+    border-radius: 50%;
+    transition: all .2s ease;
+}
+
+.social-icons .btn:hover {
+    box-shadow: 0 0 20px rgb(241, 156, 86);
+}
+
+@media (max-width: 768px) {
+    .home-container .home-text {
+        text-align: center;
+    }
+
+    .home-text h1 {
+        font-size: 26px;
+        line-height: 38px;
+    }
+
+    body .home{
+        position: relative;
+    }
+    .home .home-container{
+        position: initial !important;
+    }
+
+    .home-container .social-icons{
+        bottom: 32px;
+        left: 50%;
+        right: initial;
+        top: initial;
+        display: flex;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 420px) {
+    .home-text h1 {
+        font-size: 21px;
+        line-height: 38px;
+    }
+
+    .home-text .home-text-btns {
+        flex-direction: column;
+    }
+
+    .home-text-btns .btn {
+        width: 100%;
+    }
+}
